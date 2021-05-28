@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Rubik', sans-serif;
+}
+header{
+    width:100%;
+    height: 100vh;
+    background-image: linear-gradient(to left,#ffff 80%, #ffc3d7 20%);
+}
+
+.navsection{
+    width:100%;
+    background-color: yellow;
+    height: 20vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to top,#ffff 80%, #c3f5ff 20%);
+}
+.logo{
+    width:30%;
+    color:#ffff;
+    background-image: linear-gradient(#ffc3d7, #c3f5ff);
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+.logo h1{
+    text-transform: uppercase;
+    font-size:1.6rem;
+    animation: anim 2s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anim{
+    from{padding-left:40px;}
+    to{ padding-right:20px;}
+}
+nav{
+    width:60%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a{
+    text-decoration:none;
+    font-size: 1rem;
+    font-weight: bold;
+    color:#4458dc;
+    position: relative;
+}
+nav a:first-child{
+    color:rgb(0, 0, 0);
+}
+nav a:before{
+    content:"";
+    position: absolute;
+    top:110%;
+    left:0;
+    width:0%;
+    height:2px;
+    border-bottom: 3px solid #4458dc;
+    transition: all 0.4s linear;
+}
+nav a:hover:before{
+    width:100%;
+    color:rgb(0, 0, 0);
+}
+
+nav a:first-child:hover:before{
+    color:#4458dc;
+}
+main{
+    height:80vh; 
+    display:flex;
+    justify-content: space-around;
+    align-items: center;  
+}
+
+.rightside{
+    /* border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ; */
+    background-color:#4458dc ;
+    /* top:50%;
+    background-color: yellow;
+    right:0;
+    width:100px;
+    height:100px;
+    position:absolute;
+    overflow: hidden; */
+}
+.rightside img{
+    max-width: 400px;
+    height:auto;
+}
+.leftside{
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ; 
+    background-color: #c3f5ff ;
+}
+
+.leftside h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.leftside h3:after{
+    content:" O ";
+    width:350px;
+    height:3px;
+    position: absolute;
+    top:43%;
+    left:15%;
+    background: black;
+}
+
+.leftside h1{
+    margin-top:20px;
+    font-size: 70px;
+    margin-bottom: 25px;
+}
+
+.leftside h2{
+    margin-bottom: 35px;
+    font-weight: 500;
+    word-spacing: 5px;
+}
+
+.leftside .btn1, .btn2{
+    font-size: 15px;
+    font-weight: bold;
+    padding:10px 25px;
+    cursor: pointer;
+    border-radius: 5%;
+    text-decoration: none;
+    margin-right: 50px;
+    background-image: linear-gradient(#ffc3d7, #c3f5ff);
+    border:double 2px transparent;
+    box-shadow: 0 10px 30px rgba(118, 85, 225, 0.3);
+    position: relative;
+}
+
+.leftside .btn1:before, .btn2:before{
+    content:"";
+    position: absolute;
+    top:80%;
+    left:0;
+    width:0%;
+    height:2px;
+    border-bottom: 3px solid #4458dc;
+    transition: all 0.4s linear;
+}
+.leftside .btn1:hover:before, .btn2:hover:before{
+    width:100%;
+    color:rgb(0, 0, 0);
+}
